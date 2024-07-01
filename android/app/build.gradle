@@ -1,6 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
-apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+// apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -70,15 +70,15 @@ def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
-    ndkVersion rootProject.ext.ndkVersion
+    compileSdkVersion 33
+    buildToolsVersion '33.0.0'
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.colormatka"
     defaultConfig {
         applicationId "com.colormatka"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+      minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
